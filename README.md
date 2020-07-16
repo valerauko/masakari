@@ -4,10 +4,10 @@ Tool to detect unused entries in your dictionary files.
 
 ## Usage
 
-Download `masakari` executable from releases. Execute.
+Download `masakari` executable from releases. Make it executable (`chmod +x masakari`). Execute.
 
 ```
-masakari /path/to/folder/to/check
+./masakari /path/to/folder/to/check
 ```
 
 If you omit the path argument it will use the current folder (`.`).
