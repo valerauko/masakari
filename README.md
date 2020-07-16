@@ -10,7 +10,7 @@ Download `masakari` executable from releases. Make it executable (`chmod +x masa
 ./masakari /path/to/folder/to/check
 ```
 
-If you omit the path argument it will use the current folder (`.`).
+It checks the given path recursively. If you omit the path argument it will use the current folder (`.`).
 
 ## Limitations
 
