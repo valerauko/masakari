@@ -52,7 +52,6 @@
       (line-seq reader))))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& [path]]
   (let [path (or path ".")
         all-files (file-seq (io/file path))
