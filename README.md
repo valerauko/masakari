@@ -20,7 +20,7 @@ Currently only works with Vue.js code and JSON dictionary files. It assumes that
 
 Downloading the binary from Github is too slow? You want to build for yourself?
 
-The simple way is using my `clojure-graal` Docker image:
+The simple way is using my [clojure-graal](https://github.com/valerauko/clojure-graalvm-native) Docker image:
 
 ```
 docker run --rm -v $(pwd):/build -w /build valerauko/clojure-graal
