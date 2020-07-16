@@ -3,7 +3,10 @@
             [clojure.string :as str]
             [clojure.pprint :refer [pprint]]
             [jsonista.core :as json])
+  (:import [java.io File])
   (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 (defn flatten-map
   ([item] (flatten-map item {} []))
@@ -24,11 +27,11 @@
 (defn file-lists
   [all-files]
   (->> all-files
-       (filter #(.isFile %))
+       (filter #(.isFile ^File %))
        (reduce
          (fn group-files
            [files file]
-           (let [filename (.getName file)
+           (let [filename (.getName ^File file)
                  type (condp re-find filename
                         #"\.json$" :lang
                         #"\.(js|vue)$" :code
