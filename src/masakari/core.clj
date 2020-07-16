@@ -44,7 +44,7 @@
     (reduce
       (fn [aggr line]
         (if-let [match (some->> line
-                                (re-seq #"\$t\('([^']+)'\)")
+                                (re-seq #"(?:[$.]t\(|v-t=\")'([^']+)'")
                                 (map second))]
           (concat aggr match)
           aggr))
