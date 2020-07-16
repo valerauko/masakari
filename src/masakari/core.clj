@@ -53,8 +53,8 @@
 
 (defn -main
   "I don't do a whole lot ... yet."
-  [& args]
-  (let [path "."
+  [& [path]]
+  (let [path (or path ".")
         all-files (file-seq (io/file path))
         {:keys [lang code]} (file-lists all-files)
         dicts (apply merge (map (comp flatten-map dict-map) lang))
